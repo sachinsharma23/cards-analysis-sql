@@ -29,10 +29,10 @@ The dataset contains information about:
 
 ### 2. Data Preparation
 The `credit_limit` column was stored as text (with `$` and commas).  
-It was converted into a numeric column to allow aggregation and calculations.
+Converted this into a numeric column to allow aggregation and calculations.
 
 ### 3. Analysis Performed
-The following business-style questions were answered using SQL:
+The following questions were answered using SQL:
 
 - total cards and unique clients
 - card distribution by brand and type
