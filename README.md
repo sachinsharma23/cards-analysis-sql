@@ -54,5 +54,3 @@ The following questions were answered using SQL:
 - Data cleaning using UPDATE
 - Window function: `RANK()`
 
-uthor
-SQL learning portfolio project.
