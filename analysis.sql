@@ -1,4 +1,23 @@
--- step 1) validation checks
+-- table creation
+drop table if exists cards;
+
+create table cards (
+  id integer,
+  client_id integer,
+  card_brand text,
+  card_type text,
+  card_number text,
+  expires text,
+  cvv integer,
+  has_chip text,
+  num_cards_issued integer,
+  credit_limit text,
+  acct_open_date text,
+  year_pin_last_changed integer,
+  card_on_dark_web text
+);
+
+--  validation checks
 -- total rows loaded (data load confirm)
 select count(*) as total_rows
 from cards;
@@ -30,7 +49,7 @@ from cards
 group by card_brand
 order by total_cards desc;
 
--- step 2) Data prep
+--  Data prep
 alter table cards
 add column if not exists credit_limit_num numeric;
 
@@ -43,7 +62,7 @@ select credit_limit, credit_limit_num
 from cards
 limit 10;
 
--- step 3) analysis queries
+--  analysis queries
 -- q1) total cards and unique clients
 select
   count(*) as total_cards,
